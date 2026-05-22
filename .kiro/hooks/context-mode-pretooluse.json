@@ -1,0 +1,13 @@
+{
+  "name": "Context Mode Pre-Tool",
+  "version": "1.0.0",
+  "description": "Context-mode pre-tool-use hook for routing enforcement",
+  "when": {
+    "type": "preToolUse",
+    "toolTypes": ["shell", "read"]
+  },
+  "then": {
+    "type": "runCommand",
+    "command": "echo '{\"tool_name\":\"${TOOL_NAME:-unknown}\"}' | context-mode hook kiro pretooluse"
+  }
+}

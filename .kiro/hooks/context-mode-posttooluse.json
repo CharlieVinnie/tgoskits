@@ -1,0 +1,13 @@
+{
+  "name": "Context Mode Post-Tool",
+  "version": "1.0.0",
+  "description": "Context-mode post-tool-use hook for event capture",
+  "when": {
+    "type": "postToolUse",
+    "toolTypes": ["*"]
+  },
+  "then": {
+    "type": "runCommand",
+    "command": "echo '{}' | context-mode hook kiro posttooluse"
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "mcpServers": {
+    "fetch": {
+      "command": "uvx",
+      "args": [
+        "mcp-server-fetch"
+      ],
+      "autoApprove": [
+        "fetch"
+      ]
+    },
+    "git-guard": {
+      "command": "uv",
+      "args": [
+        "--directory",
+        "/home/charlie/biglabB/mcp-servers/git-guard/",
+        "run",
+        "main.py"
+      ],
+      "env": {
+        "GIT_BASE_DIR": "/home/charlie/biglabB/tgoskits",
+        "GIT_RESETTABLE_BRANCHES": "dev"
+      },
+      "autoApprove": [
+        "list_branches",
+        "create_agent_branch",
+        "run_git_command",
+        "reset_branch_to_upstream",
+        "switch_branch",
+        "switch_branch"
+      ],
+      "disabled": true
+    },
+    "run-tgoskits-test": {
+      "command": "uv",
+      "args": [
+        "--directory",
+        "/home/charlie/biglabB/mcp-servers/run-tgoskits-test/",
+        "run",
+        "main.py"
+      ],
+      "autoApprove": [
+        "run_tgoskits_test",
+        "run_tgoskits_test",
+        "run_tgoskits_test_on_linux_host"
+      ],
+      "disabled": false
+    },
+    "create-tgoskits-test": {
+      "command": "uv",
+      "args": [
+        "--directory",
+        "/home/charlie/biglabB/mcp-servers/create-tgoskits-test/",
+        "run",
+        "main.py"
+      ],
+      "autoApprove": [
+        "create_tgoskits_test"
+      ],
+      "disabled": false
+    }
+  }
+}
